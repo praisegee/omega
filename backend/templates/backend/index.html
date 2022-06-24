@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Home</h1>
-</body>
-</html>
+{% extends 'backend/main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="slider-container">
+    <div class="image-container">
+        <i id="prev-btn" class="fa fa-angle-double-left control-btn" aria-hidden="true"></i>
+        <img class="slide-img active"  src="{% static 'backend/img/img1.jpg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/img2.jpg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/img3.jpg' %}" />
+        <i id="next-btn" class="fa fa-angle-double-right control-btn" aria-hidden="true"></i>
+    </div>   
+</div>
+
+<section>
+    <div>
+        <h2>Content</h2>
+    </div>
+
+    <div>
+        <h2>Image</h2>
+    </div>
+</section>
+
+{% endblock content %}
