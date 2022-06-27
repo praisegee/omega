@@ -1,13 +1,13 @@
 {% load static %}
 
 <header class="header">
-    <a href="#home">HOME</a>
-    <a href="#home">ABOUT</a>
-    <a href="#home">MESSAGES</a>
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'about' %}">ABOUT</a>
+    <a href="{% url 'message' %}">MESSAGES</a>
     <div>
         <img class="logo" src="{% static 'backend/img/logo.png' %}" />
     </div>
-    <a href="#home">DONATE</a>
-    <a href="#home">CONTACT</a>
-    <a href="#home">CHATROOM</a>
+    <a href="{% url 'donate' %}">DONATE</a>
+    <a href="{% url 'contact' %}">CONTACT</a>
+    <a href="{% url 'chatroom' %}">CHATROOM</a>
 </header>

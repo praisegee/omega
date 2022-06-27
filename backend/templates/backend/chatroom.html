@@ -1,0 +1,79 @@
+{% extends 'backend/main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="m-text-container about">
+
+    <h2 class="mission-title">OMEGA FAMILY CHAT ROOM</h2>
+
+    <p class="mission-text">
+        <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. 
+        Voluptatum, delectus mollitia? 
+        Ullam sed magni assumenda quam et, 
+        vitae id voluptas consequatur eius, neque officiis, 
+        totam cupiditate consectetur provident obcaecati voluptate.
+    </p><br />
+    <p class="mission-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptatum, delectus mollitia? 
+        Ullam sed magni assumenda quam et, 
+        vitae id voluptas consequatur eius, neque officiis, 
+        totam cupiditate consectetur provident obcaecati voluptate.
+    </p><br />
+
+</div>
+
+<div class="chat">
+    <div class="header">
+        <h1>Chat Room</h1>
+    </div>
+    <div class="body">
+        <dir class="user">
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+            <p class="message">Hello</p>
+        </dir>
+        <dir class="me">
+            <p class="user-msg">Hey</p>
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+        </dir>
+        <dir class="user">
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+            <p class="message">Hello</p>
+        </dir>
+        <dir class="user">
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+            <p class="message">Hello</p>
+        </dir>
+        <dir class="user">
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+            <p class="message">Hello</p>
+        </dir>
+        <dir class="me">
+            <p class="user-msg">Hey</p>
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+        </dir>
+        <dir class="me">
+            <p class="user-msg">Hey</p>
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+        </dir>
+        <dir class="user">
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+            <p class="message">Hello</p>
+        </dir>
+        <dir class="me">
+            <p class="user-msg">Hey</p>
+            <img src="{% static 'backend/img/profile.png' %}" alt="">
+        </dir>
+        
+    </div>
+    <div class="footer">
+        <form action="">
+            <input type="text" name="chat_msg" id="chat-msg" placeholder="Type a message">
+            <button type="submit id="send-btn">SEND</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

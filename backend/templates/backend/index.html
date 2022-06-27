@@ -4,24 +4,118 @@
 
 {% block content %}
 
+
 <div class="slider-container">
     <div class="image-container">
         <i id="prev-btn" class="fa fa-angle-double-left control-btn" aria-hidden="true"></i>
-        <img class="slide-img active"  src="{% static 'backend/img/img1.jpg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/img2.jpg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/img3.jpg' %}" />
+        <img class="slide-img active"  src="{% static 'backend/img/1.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/2.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/3.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/4.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/5.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/6.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/7.jpeg' %}" />
+        <img class="slide-img"  src="{% static 'backend/img/8.jpeg' %}" />
         <i id="next-btn" class="fa fa-angle-double-right control-btn" aria-hidden="true"></i>
     </div>   
 </div>
 
-<section>
-    <div>
-        <h2>Content</h2>
-    </div>
+<div class="section">
 
-    <div>
-        <h2>Image</h2>
+    <div class="mission-container">
+        <div class="mission-picture">
+            <img id="mission-img" src="{% static 'backend/img/pray.png' %}" alt="">
+        </div>
+
+        <div class="m-text-container">
+
+            <h2 class="mission-title">MISSION</h2>
+
+            <p class="mission-text">
+                <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p><br />
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p><br />
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p>
+        </div>
     </div>
-</section>
+</div>
+
+<div class="section">
+
+    <div class="mission-container apostle">
+
+        <div class="m-text-container">
+            <h2 class="mission-title">MESSAGE FROM PAPA</h2>
+            <p class="mission-text">
+                <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p><br />
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p><br />
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p>
+        </div>
+
+        <div class="mission-picture">
+            <img id="papa-img" src="{% static 'backend/img/papa.png' %}" alt="">
+            <p class="mission-text apostle-name">Apostle Gabrel Clement</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="member-pop">
+    <div class="form-container">
+        <div id="success">
+            <h2>Registration Complete</h2>
+            <p>You are welcome to Omega family. 😊 </p>
+            <div class="success">
+                <img src="{% static 'backend/img/check2.png' %}" alt="">
+            </div>
+        </div>
+        <div id="register">
+            <h2>Omage member</h2>
+            <p>Inkjshda kajshda akjshdka dakjshdkjasd aksjdhakjhsdja skdjha</p>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" id="fullname" name="fullname" placeholder="Full name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="date" id="dob" name="dob" placeholder="Date of birth">
+                <input type="text" id="address" name="address" placeholder="Address">
+                <input type="tel" id="phone" name="phone" placeholder="Phone number">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'backend/img/logo.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="{% static 'backend/css/styles.css' %}" />
     
-    <title>Document</title>
+    <title>Omega Vission</title>
 </head>
 <body>
 
@@ -20,7 +21,10 @@
         {% endblock content %}
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% include 'backend/snippets/footer.html' %}
+    
+    <script src="{% static 'backend/js/jquery.min.js' %}"></script>
     <script src="{% static 'backend/js/scripts.js' %}"></script>
+    <script src="mediaelement-and-player.min.js"></script>
 </body>
 </html>

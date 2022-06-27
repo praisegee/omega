@@ -1,0 +1,89 @@
+{% extends 'backend/main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="m-text-container about">
+
+        <h2 class="mission-title">MESSAGES</h2>
+
+        <p class="mission-text">
+            <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. 
+            Voluptatum, delectus mollitia? 
+            Ullam sed magni assumenda quam et, 
+            vitae id voluptas consequatur eius, neque officiis, 
+            totam cupiditate consectetur provident obcaecati voluptate.
+        </p><br />
+        <p class="mission-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptatum, delectus mollitia? 
+            Ullam sed magni assumenda quam et, 
+            vitae id voluptas consequatur eius, neque officiis, 
+            totam cupiditate consectetur provident obcaecati voluptate.
+        </p><br /><br /><br />
+        <!-- <hr /> -->
+
+        <div class="tab-panel">
+
+            <ul class="tabs">
+                <li data-id="video" class="active-tab">Videos</li>
+                <li data-id="audio">Audios</li>
+            </ul>
+
+            <br /><br />
+
+            <div id="video" class="panel active-panel">
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/Y9XE39bAsUA" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <h2>FOUR SIGNS THAT YOU HAVE ENCOUNTERED GOD - APOSTLE CLEMENT GABRIEL</h2>
+            </div>
+            <div id="audio" class="panel">
+                <div class="audio-wrapper">
+                    <h2>FOUR SIGNS THAT YOU HAVE </h2>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                </div>
+                <hr />
+                <div class="audio-wrapper">
+                    <h2>FOUR SIGNS THAT YOU HAVE ENCOLEMENT GABRIEL</h2>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                </div>
+                <hr />
+                <div class="audio-wrapper">
+                    <h2>FOUR SIGNS THAT YOU HAVE ENCOUL</h2>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                </div>
+                <hr />
+                <div class="audio-wrapper">
+                    <h2>FOUR SIGNS THAT YOU HAVE ENCOUNTE</h2>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                </div>
+                <hr />
+            </div>
+        </div>
+        
+    </div>
+
+
+{% endblock content %}
