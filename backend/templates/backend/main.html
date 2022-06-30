@@ -13,7 +13,29 @@
 </head>
 <body>
 
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="omega-logo">
+        <img class="logo" src="{% static 'backend/img/logo.png' %}" />
+    </div>
+
     {% include 'backend/snippets/header.html' %}
+
+    <div class="side-bar">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+            <div class="item"><a href="{% url 'home' %}">HOME</a></div>
+            <div class="item"><a href="{% url 'about' %}">ABOUT</a></div>
+            <div class="item"><a href="{% url 'message' %}">MESSAGES</a></div>
+            <div class="item"><a href="{% url 'donate' %}">DONATE</a></div>
+            <div class="item"><a href="{% url 'contact' %}">CONTACTS</a></div>
+            <div class="item"><a href="{% url 'chatroom' %}">CHATROOM</a></div>
+        </div>
+    </div>
 
     <section class="container">
         {% block content %}

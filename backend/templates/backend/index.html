@@ -5,26 +5,56 @@
 {% block content %}
 
 
-<div class="slider-container">
-    <div class="image-container">
-        <i id="prev-btn" class="fa fa-angle-double-left control-btn" aria-hidden="true"></i>
-        <img class="slide-img active"  src="{% static 'backend/img/1.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/2.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/3.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/4.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/5.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/6.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/7.jpeg' %}" />
-        <img class="slide-img"  src="{% static 'backend/img/8.jpeg' %}" />
-        <i id="next-btn" class="fa fa-angle-double-right control-btn" aria-hidden="true"></i>
-    </div>   
+<div id="carosel">
+    <i id="prev-btn" class="fa fa-angle-double-left control-btn" aria-hidden="true"></i>
+    <div class="slider-container">
+        <div class="image-container">
+            <div class="slide-img active"><img src="{% static 'backend/img/1.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/2.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/3.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/4.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/5.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/6.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/7.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/8.jpeg' %}" alt=""></div>
+            <div class="slide-img"><img src="{% static 'backend/img/9.jpeg' %}" alt=""></div>
+        </div>   
+    </div>
+    <i id="next-btn" class="fa fa-angle-double-right control-btn" aria-hidden="true"></i>
 </div>
 
 <div class="section">
 
     <div class="mission-container">
-        <div class="mission-picture">
+        <!-- <div class="mission-picture">
             <img id="mission-img" src="{% static 'backend/img/pray.png' %}" alt="">
+        </div> -->
+
+        <div class="m-text-container">
+
+            <h2 class="mission-title">VISION</h2>
+
+            <p class="mission-text">
+                <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p><br />
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p><br />
+            <p class="mission-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatum, delectus mollitia? 
+                Ullam sed magni assumenda quam et, 
+                vitae id voluptas consequatur eius, neque officiis, 
+                totam cupiditate consectetur provident obcaecati voluptate.
+            </p>
         </div>
 
         <div class="m-text-container">
@@ -59,11 +89,12 @@
 <div class="section">
 
     <div class="mission-container apostle">
-
         <div class="m-text-container">
-            <h2 class="mission-title">MESSAGE FROM PAPA</h2>
+            <img id="papa-img" src="{% static 'backend/img/papa.png' %}" alt="">
+            <!-- <p class="mission-text apostle-name">Apostle Gabrel Clement</p> -->
+            <!-- <h2 class="mission-title">MESSAGE FROM PAPA</h2> -->
             <p class="mission-text">
-                <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. 
+                <strong>Apostle Gabrel Clement</strong> sit amet consectetur adipisicing elit. 
                 Voluptatum, delectus mollitia? 
                 Ullam sed magni assumenda quam et, 
                 vitae id voluptas consequatur eius, neque officiis, 
@@ -83,11 +114,6 @@
                 vitae id voluptas consequatur eius, neque officiis, 
                 totam cupiditate consectetur provident obcaecati voluptate.
             </p>
-        </div>
-
-        <div class="mission-picture">
-            <img id="papa-img" src="{% static 'backend/img/papa.png' %}" alt="">
-            <p class="mission-text apostle-name">Apostle Gabrel Clement</p>
         </div>
 
     </div>

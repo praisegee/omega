@@ -34,9 +34,69 @@ header.header a {
     margin: 0 0.5rem;
 }
 
-header.header .logo {
+header.header .logo, .omega-logo .logo {
     width: 150px;
     height: 150px;
+}
+
+.omega-logo {
+    display: none;
+}
+
+.side-bar {
+    background: #befefe55;
+    backdrop-filter: blur(25px);
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.side-bar .close-btn {
+    position: absolute;
+    color: #0a1046;
+    font-size: 26px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.side-bar .menu {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar .menu .item a {
+    color: #0a1046;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    padding: 5px 30px;
+    line-height: 60px;
+    font-weight: 600;
+}
+
+.menu-btn {
+    position: absolute;
+    left: 0;
+    color: #0a1046;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.side-bar.side-bar-active {
+    left: 0;
 }
 
 .container .member-pop {
@@ -111,38 +171,62 @@ header.header .logo {
     color: #eee;
 }
 
-.slider-container {
-    width: 100%;
-    height: 100%;
+#carosel {
+    display: block;
+    padding: 0 50px;
+    position: relative;
     margin-bottom: 50px;
 }
 
+.slider-container {
+    width: 950px;
+    height: 600px;
+    /* overflow: hidden; */
+}
+
 .slider-container .image-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    overflow: hidden;
+    display: block;
+    width: 950px;
+    height: 600px;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.control-btn {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0a1046;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+}
+
+#prev-btn {
+    left: 0;
+}
+
+#next-btn {
+    right: 0;
 }
 
 .slider-container .image-container .slide-img {
     display: none;
     width: 950px;
     height: 600px;
-    border-radius: 40px;
+    /* border-radius: 40px; */
+    /* border: 5px solid #0a1046; */
+}
+
+.slider-container .image-container .slide-img img{
+    width: 100%;
+    height: 600px;
     border: 5px solid #0a1046;
+    border-radius: 40px;
 }
 
-.slider-container .image-container .active {
-    display: inline-block;
-    transition: .6s all ease;
-}
-
-.control-btn {
-    font-size: 2.5rem;
-    color: #000;
-    cursor: pointer;
+.slider-container .image-container .slide-img.active {
+    display: flex;
 }
 
 .mission-title {
@@ -159,7 +243,7 @@ header.header .logo {
 }
 
 .mission-container {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -176,27 +260,29 @@ header.header .logo {
 }
 
 .mission-text {
+    display: block;
+    width: 450px;
     font-size: 1.2rem;
 }
 
 .mission-picture {
-    width: 40%;
+    width: 30%;
 }
 
 #mission-img {
-    width: calc(1009px / 2.5);
+    width: 350px;
     height: calc(1114px / 2.5);
     border-radius: 0 0 40% 40%;
 }
 
 .mission-picture img {
-    width: 600px;
+    width: 450px;
     border-radius: 15px;
 }
 
 #papa-img {
-    width: 422px;
-    height: 521px;
+    width: 300px;
+    /* height: 521px; */
 }
 
 .apostle {
@@ -213,6 +299,24 @@ header.header .logo {
 .about {
     width: 90%;
     margin: auto;
+}
+
+#audio .audio-wrapper {
+    margin: 12px;
+}
+
+#audio .audio-wrapper h2 {
+    color: #0a1046;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#audio .audio-wrapper audio::-webkit-media-controls-panel {
+    background: #17697e;
+}
+
+#audio .audio-wrapper audio::-webkit-media-controls-current-time-display {
+    color: #0a1046;
 }
 
 hr {
@@ -270,7 +374,7 @@ footer {
 
 .chat {
     width: 450px;
-    height: 85vh;
+    height: 550px;
     margin: 30px auto;
     display: flex;
     flex-direction: column;
@@ -325,6 +429,7 @@ footer {
 .chat .body p.message {
     background: #568996;
     color: #fff;
+    font-size: 1rem;
     padding: 10px;
     margin-left: 5px;
     border-radius: 0 10px 10px;
@@ -334,6 +439,7 @@ footer {
     color: #fff;
     background: #035664;
     padding: 10px;
+    font-size: 1rem;
     margin-right: 5px;
     border-radius: 10px 10px 0 10px;
 }
@@ -367,4 +473,140 @@ footer {
 
 .chat .footer form button:hover {
     background: #17697e;
+}
+
+
+@media screen and (max-width: 900px) {
+    .slider-container .image-container .slide-img {
+        width: 750px;
+    }
+    .mission-container {
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu-btn {
+        display: block;
+    }
+    header.header {
+        display: none;
+    }
+    #carosel {
+        width: 883px;
+        display: block;
+        padding: 0 50px;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .section {
+        width: 850px;
+        margin-bottom: 60px;
+    }
+    .mission-text {
+        display: block;
+        width: 375px;
+        font-size: 1.2rem;
+    }
+    .omega-logo {
+        display: flex;
+        width: 1010px;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider-container .image-container {
+        width: 600px;
+    }
+    .slider-container .image-container .slide-img {
+        width: 600px;
+    }
+    .slider-container .image-container .slide-img img {
+        width: 760px;
+        height: 570px;
+        border: 5px solid #0a1046;
+        border-radius: 40px;
+    }
+    .mission-container {
+        width: 804px;
+        padding: 0 20px;
+    }
+    .chat {
+        width: 380px;
+        height: 462px;
+    }
+    .chat .footer input {
+        width: 200px;
+        height: 500px;
+    }
+    #papa-img {
+        width: 250px;
+        /* height: 521px; */
+    }
+    .mission-title {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .slider-container {
+        width: 450px;
+        height: 350px;
+        /* padding-left: 30px; */
+    }
+    #carosel {
+        width: 510px;
+        display: block;
+        padding: 0 30px;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .omega-logo {
+        display: flex;
+        width: 580px;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider-container .image-container {
+        width: 450px;
+    }
+    .slider-container .image-container .slide-img {
+        width: 550px;
+    }
+    .slider-container .image-container .slide-img img {
+        width: 415px;
+        height: 337px;
+        border: 5px solid #0a1046;
+        border-radius: 40px;
+    }
+    .mission-container {
+        display: block;
+        flex-wrap: wrap;
+    }
+    .mission-text {
+        display: block;
+        width: 474px;
+        margin: auto;
+        font-size: 1.2rem;
+    }
+    .chat {
+        width: 280px;
+    }
+    .chat .footer input {
+        width: 200px;
+    }
+    .mission-container {
+        width: 500px;
+    }
+    .slider-container .image-container .slide-img {
+        width: 400px;
+    }
+    #papa-img {
+        width: 150px;
+        float: left;
+        padding: 0 15px 15px 0;
+        border-radius: 20px;
+    }
+    .mission-title {
+        width: 250px;
+    }
 }

@@ -67,7 +67,7 @@ $(function() {
     });
 
     $('i#next-btn').on('click', function() {
-        var currentImg = $('.active');
+        var currentImg = $('.slide-img.active');
         var nextImg = currentImg.next('.slide-img');
 
         if (nextImg.length) {
@@ -79,7 +79,7 @@ $(function() {
     });
 
     $('i#prev-btn').on('click', function() {
-        var currentImg = $('.active');
+        var currentImg = $('.slide-img.active');
         var prevImg = currentImg.prev('.slide-img');
 
         if (prevImg.length) {
@@ -117,6 +117,18 @@ $(function() {
         // $sendBtn.on('click', function() {
         //     alert($chatMsg); 
         // });
+    });
+
+
+    // jquery for expand and collapse the side bar
+    $('.menu-btn').on('click', function() {
+        $('.side-bar').addClass('side-bar-active');
+        $(this).css('visibility', 'hidden');
+    });
+
+    $('.close-btn').on('click', function() {
+        $('.side-bar').removeClass('side-bar-active');
+        $('.menu-btn').css('visibility', 'visible');
     });
 
 
