@@ -13,10 +13,10 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 }
 
-.container {
-    width: 80%;
+.whole {
+    height: 100%;
     min-height: 100vh;
-    margin: auto;
+    /* margin: auto; */
 }
 
 header.header {
@@ -254,14 +254,11 @@ header.header .logo, .omega-logo .logo {
 } */
 
 .m-text-container {
-    padding: 10px;
     margin-top: 10px;
-    width: 40%;
 }
 
 .mission-text {
     display: block;
-    width: 450px;
     font-size: 1.2rem;
 }
 
@@ -281,7 +278,8 @@ header.header .logo, .omega-logo .logo {
 }
 
 #papa-img {
-    width: 300px;
+    width: 250px;
+    border-radius: 15px;
     /* height: 521px; */
 }
 
@@ -291,7 +289,6 @@ header.header .logo, .omega-logo .logo {
 }
 
 .apostle-name {
-    text-align: center;
     font-size: 22px;
     font-weight: 600;
 }
@@ -301,7 +298,7 @@ header.header .logo, .omega-logo .logo {
     margin: auto;
 }
 
-#audio .audio-wrapper {
+/* #audio .audio-wrapper {
     margin: 12px;
 }
 
@@ -317,7 +314,7 @@ header.header .logo, .omega-logo .logo {
 
 #audio .audio-wrapper audio::-webkit-media-controls-current-time-display {
     color: #0a1046;
-}
+} */
 
 hr {
     border: 1px solid #0a1046;
@@ -361,7 +358,7 @@ footer {
     display: block;
 }
 
-.tab-panel .panel.active-panel h2 {
+.tab-panel .panel.active-panel h3 {
     width: 60%;
     padding: 4px;
 }
@@ -475,36 +472,6 @@ footer {
     background: #17697e;
 }
 
-
-@media screen and (max-width: 900px) {
-    .slider-container .image-container .slide-img {
-        width: 750px;
-    }
-    .slider-container .image-container {
-        width: 765px;
-    }
-    /* .slider-container .image-container .slide-img img {
-        width: 675px;
-        height: 571px;
-    }
-    .mission-container {
-        width: 750px;
-    }
-    /* .slider-container .image-container {
-        width: 840px;
-    } */
-    /* .slider-container {
-        width: 750px; */
-        /* height: 600px; */
-    /* }
-    .mission-text {
-        width: 375px;
-    }
-    #carosel {
-        width: 820px;
-    } */ 
-}
-
 @media screen and (max-width: 740px) {
     .menu-btn {
         display: block;
@@ -512,21 +479,8 @@ footer {
     header.header {
         display: none;
     }
-    #carosel {
-        width: 883px;
-        display: block;
-        padding: 0 50px;
-        position: relative;
-        margin-bottom: 50px;
-    }
-    .mission-text {
-        display: block;
-        width: 375px;
-        font-size: 1.2rem;
-    }
     .omega-logo {
         display: flex;
-        width: 1010px;
         justify-content: center;
         align-items: center;
     }
@@ -549,6 +503,10 @@ footer {
         width: 804px;
         padding: 0 20px;
     }
+    header.header .logo, .omega-logo .logo {
+        width: 100px;
+        height: 100px;
+    }
     .chat {
         width: 380px;
         height: 462px;
@@ -557,79 +515,22 @@ footer {
         width: 200px;
         height: 500px;
     }
-    #papa-img {
-        width: 250px;
-        /* height: 521px; */
+    .tab-panel .panel.active-panel h3 {
+        padding-left: 13px;
     }
+    /* #papa-img {
+        margin: ;
+        width: 250px;
+        height: 221px;
+    } */
     .mission-title {
         width: 250px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .slider-container {
-        width: 450px;
-        height: 350px;
-        /* padding-left: 30px; */
-    }
-    #carosel {
-        width: 510px;
-        display: block;
-        padding: 0 30px;
-        position: relative;
-        margin-bottom: 50px;
-    }
-    .omega-logo {
-        display: flex;
-        width: 580px;
-        justify-content: center;
-        align-items: center;
-    }
-    .slider-container .image-container {
-        width: 450px;
-    }
-    .slider-container .image-container .slide-img {
-        width: 550px;
-    }
-    .slider-container .image-container .slide-img img {
-        width: 415px;
-        height: 337px;
-        border: 5px solid #0a1046;
-        border-radius: 40px;
-    }
-    .mission-container {
-        display: block;
-        flex-wrap: wrap;
     }
     .mission-text {
         display: block;
-        width: 474px;
-        margin: auto;
         font-size: 1.2rem;
     }
-    .chat {
-        width: 280px;
-    }
-    .chat .footer input {
-        width: 200px;
-    }
-    .mission-container {
-        width: 500px;
-    }
-    .slider-container .image-container .slide-img {
-        width: 400px;
-    }
-    #papa-img {
-        width: 150px;
-        float: left;
-        padding: 0 15px 15px 0;
-        border-radius: 20px;
-    }
-    .mission-title {
-        width: 250px;
-    }
     footer {
-        width: 600px;
+        padding: 0.6rem;
     }
-    
 }

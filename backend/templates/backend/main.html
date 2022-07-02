@@ -6,47 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'backend/img/logo.png' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="{% static 'backend/css/styles.css' %}" />
     
     <title>Omega Vission</title>
+
+    <link rel="stylesheet" href="{% static 'backend/css/styles.css' %}" />
 </head>
 <body>
 
-    <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-    </div>
+    {% include 'backend/snippets/sidebar.html' %} 
+    {% include 'backend/snippets/header.html' %} 
 
-    <div class="omega-logo">
-        <img class="logo" src="{% static 'backend/img/logo.png' %}" />
-    </div>
-
-    {% include 'backend/snippets/header.html' %}
-
-    <div class="side-bar">
-        <div class="close-btn">
-            <i class="fas fa-times"></i>
-        </div>
-        <div class="menu">
-            <div class="item"><a href="{% url 'home' %}">HOME</a></div>
-            <div class="item"><a href="{% url 'about' %}">ABOUT</a></div>
-            <div class="item"><a href="{% url 'message' %}">MESSAGES</a></div>
-            <div class="item"><a href="{% url 'donate' %}">DONATE</a></div>
-            <div class="item"><a href="{% url 'contact' %}">CONTACTS</a></div>
-            <div class="item"><a href="{% url 'chatroom' %}">CHATROOM</a></div>
-        </div>
-    </div>
-
-    <section class="container">
+    <!-- <section class="container"> -->
         {% block content %}
     
         {% endblock content %}
-    </section>
+    <!-- </section> -->
 
     {% include 'backend/snippets/footer.html' %}
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'backend/js/jquery.min.js' %}"></script>
     <script src="{% static 'backend/js/scripts.js' %}"></script>
-    <script src="mediaelement-and-player.min.js"></script>
 </body>
 </html>
